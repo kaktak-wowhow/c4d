@@ -34,11 +34,23 @@
       }, navListEl);
       navArray.push(navItemEl);
 
-      createEl({
+      var navAnchorEl = createEl({
         tagName: 'a',
         href: '#' + articleId,
         text: articleShortName,
       }, navItemEl);
+      navAnchorEl.addEventListener('click', function(ev) {
+        if (history.pushState) {
+          ev.preventDefault();
+          history.pushState(null, null, '#' + articleId);
+
+          setActiveElement(navArray, articleId);
+          setActiveElement(mainArticleArray, articleId);
+        }
+        else {
+          location.hash = '#' + articleId;
+        }
+      })
     });
 
     setActiveElement(navArray, hashId);

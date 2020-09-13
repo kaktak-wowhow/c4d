@@ -1,5 +1,5 @@
 <nav class="page-side-nav sticky">
   <ul class="nav-products">{% for item in site.data.products %}
-    <li class="nav-products-item {% if page.url == item.link %}active{% endif %}"><a href="{{ item.link }}">{{ item.title }}</a></li>
+    <li class="nav-products-item {% if page.url == site.baseurl + item.link %}active{% endif %}"><a href="{{site.baseurl}}{{item.link}}">{{ item.title }}</a></li>
   {% endfor %}</ul>
 </nav>
