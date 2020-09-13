@@ -1,0 +1,42 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+html, body, img, a, ul, li, figure {
+  margin: 0;
+  padding: 0;
+}
+
+input, textarea, select, option, button {
+  outline: 0;
+  font-family: inherit;
+  font: inherit;
+  -webkit-appearance: none;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+img, iframe, button {
+  border: 0;
+}
+
+img {
+  border-image: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
