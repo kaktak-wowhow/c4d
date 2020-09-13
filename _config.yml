@@ -20,7 +20,7 @@
 
 title: KAKTAK
 description: Cinema4D plugins
-baseurl: "https://kaktak-wowhow.github.io/docs/" # the subpath of your site, e.g. /blog
+baseurl: "/docs" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
