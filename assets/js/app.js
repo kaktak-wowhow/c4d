@@ -12,6 +12,12 @@
 
     mainArticleArray.forEach(function (articleEl, index) {
       var articleShortName = articleEl.dataset.shortName;
+      if (!articleShortName) {
+        var headingEl = articleEl.querySelector('h1');
+        articleShortName = headingEl ? headingEl.innerText : '???';
+        articleEl.dataset.shortName = articleShortName;
+      }
+
       var articleAnchorEl = articleEl.querySelector('a[id]') || articleEl.querySelector('a[name]');
       if (!articleAnchorEl) {
         var anchorId = articleShortName.toLowerCase().replace(/\s+/g, '-');
