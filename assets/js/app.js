@@ -160,3 +160,26 @@
     });
   }
 })();
+
+(function() {
+  var isMenuFolded = true;
+  var menuBtnEl = document.querySelector('.hamburger-menu-btn');
+  var menuEl = document.querySelector('.page-side-nav');
+
+  menuBtnEl.onclick = function(ev) {
+    if (isMenuFolded) unfoldMenu();
+    else foldMenu();
+  }
+  
+  function unfoldMenu() {
+    isMenuFolded = false;
+    menuBtnEl.classList.add('unfolded');
+    menuEl.classList.add('unfolded');
+  }
+
+  function foldMenu() {
+    isMenuFolded = true;
+    menuBtnEl.classList.remove('unfolded');
+    menuEl.classList.remove('unfolded');
+  }
+})();
