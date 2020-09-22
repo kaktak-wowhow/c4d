@@ -6,12 +6,46 @@ title: Power Extruder
   <a id="overview" name="overview"></a>
   <h1>Overview</h1>
   <p>
-    PowerExtruder is a field-based polygon extruder with the variaty of the tune
-    and animation settings.
+    PowerExtruder is a field-based polygon extruder with the variety of the tune and animation settings.
   </p>
+  <div class="media-wrapper theatre">
+    <iframe src="https://player.vimeo.com/video/457926835?muted=1&autoplay=1&loop=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+</article>
+
+<article data-short-name="Features">
+  <a id="feautures" name="feautures"></a>
+  <h1>Features</h1>
+
   <p>
-    <i>Exciting images and animations are in progress...</i>
+    PowerExtruder works with tris, quads and n-gons:
   </p>
+  <div class="flex">
+    <div class="media-wrapper liquid"><video muted controls loop playsinline src="images/powerextruder__03.mp4"></video></div>
+  </div>
+
+  <p>
+    PowerExtruder works carefully with the existing base object's UV coordinates:
+  </p>
+  <div class="flex">
+    <div class="media-wrapper liquid"><video muted controls loop playsinline src="images/powerextruder__07.mp4"></video></div>
+    <div class="media-wrapper liquid"><img src="images/om_uv.png" /></div></li>
+  </div>
+
+  <p>
+    PowerExtruder also extend base object selections to the final mesh:
+  </p>
+  <div class="flex">
+    <div class="media-wrapper liquid"><video muted controls loop playsinline src="images/powerextruder__08.mp4"></video></div>
+    <div class="media-wrapper liquid"><img src="images/om_selections.png" /></div>
+  </div>
+
+  <p>
+    PowerExtruder works fine with nested PowerExtruders. So you can extrude from the extruded mesh, restrict parent generators to specific selections, and apply subdivisions:
+  </p>
+  <div class="flex">
+    <div class="media-wrapper liquid"><video muted controls loop playsinline src="images/powerextruder__09.mp4"></video></div>
+  </div>
 </article>
 
 <article>
@@ -71,8 +105,7 @@ title: Power Extruder
   </h2>
   <div class="property-desc">
     <p>
-      This is the distance that the extruded polygon will have from its initial
-      position (in the direction of its normals).
+      This is the distance that the extruded polygon will have from its initial position (in the direction of its normals).
     </p>
   </div>
 
@@ -99,9 +132,7 @@ title: Power Extruder
   </h2>
   <div class="property-desc">
     <p>
-      If Preserve Groups (see below) is enabled, polygons that do not lie at an
-      angle to each other in excess of this value will be held together. If the
-      angle exceeds this value they will be torn apart during beveling.
+      If Preserve Groups (see below) is enabled, polygons that do not lie at an angle to each other in excess of this value will be held together. If the angle exceeds this value they will be torn apart during beveling.
     </p>
     <ul class="image-list image-list-details cols-2">
       <li><div class="media-wrapper"><img src="images/050_max_angle_0000.png" /></div></li>
@@ -116,8 +147,7 @@ title: Power Extruder
   <h2><span class="property-name">Preserve Groups</span></h2>
   <div class="property-desc">
     <p>
-      If enabled, connected surfaces will not be torn apart during beveling if
-      the angle in which they lie does not exceed the Max Angle value.
+      If enabled, connected surfaces will not be torn apart during beveling if the angle in which they lie does not exceed the Max Angle value.
     </p>
     <ul class="image-list image-list-details cols-2">
       <li><div class="media-wrapper"><img src="images/060_preserve_groups_0000.png" /></div></li>
@@ -139,8 +169,7 @@ title: Power Extruder
     </ul>
     <h3>With Extrude</h3>
     <p>
-      Extrude inner and normal extrusion executes together (some sort of bevel
-      operation)
+      Extrude inner and normal extrusion executes together (some sort of bevel operation)
     </p>
     <ul class="image-list image-list-details cols-2">
       <li><div class="media-wrapper"><img src="images/070_ext_inner_execution_0001.png" /></div></li>
@@ -152,19 +181,14 @@ title: Power Extruder
     <p>You can select from the following two modes:</p>
     <h3>Fixed Distance</h3>
     <p>
-      Polygons will be scaled during extrusion. The scaling is defined by
-      Offset, whose effect is absolute when set to Fixed Distance.
+      Polygons will be scaled during extrusion. The scaling is defined by Offset, whose effect is absolute when set to Fixed Distance.
     </p>
     <ul class="image-list image-list-details cols-2">
       <li><div class="media-wrapper"><img src="images/080_ext_inner_offset_mode_0000.png" /></div></li>
     </ul>
     <h3>Proportional</h3>
     <p>
-      Polygons will be scaled during extrusion. The scaling is defined by
-      Offset, whose effect will be in relation to the original scale when set to
-      Proportional. If surfaces of differing sizes are beveled, a value of 100%
-      will result in all surfaces simultaneously reaching the null point (when 2
-      opposing edges approach each other, they will collide).
+      Polygons will be scaled during extrusion. The scaling is defined by Offset, whose effect will be in relation to the original scale when set to Proportional. If surfaces of differing sizes are beveled, a value of 100% will result in all surfaces simultaneously reaching the null point (when 2 opposing edges approach each other, they will collide).
     </p>
     <ul class="image-list image-list-details cols-2">
       <li><div class="media-wrapper"><img src="images/080_ext_inner_offset_mode_0001.png" /></div></li>
@@ -177,10 +201,7 @@ title: Power Extruder
   </h2>
   <div class="property-desc">
     <p>
-      This is the general unit of measure for the extrude inner width, i.e., the
-      smaller the Offset value, the smaller the polygon or corner resolution.
-      The Offset value can be limited in size by enabling the Limit option. As
-      soon as points/edges are congruent they will be merged.
+      This is the general unit of measure for the extrude inner width, i.e., the smaller the Offset value, the smaller the polygon or corner resolution. The Offset value can be limited in size by enabling the Limit option. As soon as points/edges are congruent they will be merged.
     </p>
     <ul class="image-list image-list-details cols-3">
       <li><div class="media-wrapper"><img src="images/090_ext_inner_offset_0000.png" /></div><div class="media-description">Offset: -35m</div></li>
@@ -192,10 +213,7 @@ title: Power Extruder
   <h2><span class="property-name">Limit</span></h2>
   <div class="property-desc">
     <p>
-      If newly created points or edges meet when the Offset value is increased,
-      this option defines whether or not they should merge or move beyond this
-      limit. In most cases this option should be enabled. Otherwise a lot of
-      overlapping polygons can be created.
+      If newly created points or edges meet when the Offset value is increased, this option defines whether or not they should merge or move beyond this limit. In most cases this option should be enabled. Otherwise a lot of overlapping polygons can be created.
     </p>
     <ul class="image-list image-list-details cols-2">
       <li><div class="media-wrapper"><img src="images/100_ext_inner_limit_0000.png" /></div><div class="media-description">Limit is on</div></li>
@@ -256,12 +274,10 @@ title: Power Extruder
   <h2><span class="property-name">Restrict to Selection</span></h2>
   <div class="property-desc">
     <p>
-      If you have created a Polygon Selection Tag, you can drag it into this
-      field and PowerExtruder would be limited to this selection.
+      If you have created a Polygon Selection Tag, you can drag it into this field and PowerExtruder would be limited to this selection.
     </p>
     <p>
-      If selection name is provided but doesn't exist in children hierarchy - no
-      result would be generated.
+      If selection name is provided but doesn't exist in children hierarchy - no result would be generated.
     </p>
     <ul class="image-list image-list-details cols-2">
       <li><div class="media-wrapper"><img src="images/130_adv_resrtict_0000.png" /></div></li>
@@ -273,27 +289,24 @@ title: Power Extruder
     <p>Disconnect polygon selection before plugin execution</p>
   </div>
 
+  <h2><span class="property-name">Continue Level Numbering</span></h2>
+  <div class="property-desc">
+    <p>If Restrict Selection is provided and it's a specific level cap (name is 'CX', where X is a number) then new level starts from this number (by default level numbering starts from the 0)</p>
+  </div>
+
   <h2>
     <span class="property-name">Subdivision</span>
     <span class="property-unit">0..256</span>
   </h2>
   <div class="property-desc">
     <p>
-      The number of subdivision steps to be applied. Proceed with caution — the
-      number of surfaces (or the number of points), and therefore the RAM
-      required, for any object rises dramatically with each increase in this
-      value. For triangles and quadrangles, with each extra subdivision step a
-      polygon is divided into four surfaces.
+      The number of subdivision steps to be applied. Proceed with caution — the number of surfaces (or the number of points), and therefore the RAM required, for any object rises dramatically with each increase in this value. For triangles and quadrangles, with each extra subdivision step a polygon is divided into four surfaces.
     </p>
     <p>
-      So, if the object initially has three surfaces, a single subdivision
-      results in 12 surfaces, a second subdivision results in 48, a third in 192
-      and so on.
+      So, if the object initially has three surfaces, a single subdivision results in 12 surfaces, a second subdivision results in 48, a third in 192 and so on.
     </p>
     <p>
-      For n-gons, a point is created in the center of the n-gon; edges are then
-      created that run from the center point to the n-gon’s original corner
-      points. The new polygons are made up of triangles and quadrangles.
+      For n-gons, a point is created in the center of the n-gon; edges are then created that run from the center point to the n-gon’s original corner points. The new polygons are made up of triangles and quadrangles.
     </p>
     <ul class="image-list image-list-details cols-3">
       <li><div class="media-wrapper"><img src="images/140_adv_subdiv_0000.png" /></div></li>
@@ -305,10 +318,7 @@ title: Power Extruder
   <h2><span class="property-name">Smooth Subdivision</span></h2>
   <div class="property-desc">
     <p>
-      With this option enabled the object is subdivided using the Subdivision
-      Surface formula. Point positions that already exist are modified to round
-      the structure of the surface. If this option is disabled, existing point
-      positions are maintained and the surface is not smoothed when subdividing.
+      With this option enabled the object is subdivided using the Subdivision Surface formula. Point positions that already exist are modified to round the structure of the surface. If this option is disabled, existing point positions are maintained and the surface is not smoothed when subdividing.
     </p>
     <ul class="image-list image-list-details cols-3">
       <li><div class="media-wrapper"><img src="images/150_adv_subdiv_smooth_0000.png" /></div></li>
@@ -353,8 +363,7 @@ title: Power Extruder
   </h2>
   <div class="property-desc">
     <p>
-      Level polygons are scaled perpendicular to their Normals after each
-      iteration step.
+      Level polygons are scaled perpendicular to their Normals after each iteration step.
     </p>
   </div>
 
@@ -377,8 +386,7 @@ title: Power Extruder
   </h2>
   <div class="property-desc">
     <p>
-      Level polygons are rotated around their Normals after each iteration step.
-      The Normals of each individual surface are used as the rotation axes.
+      Level polygons are rotated around their Normals after each iteration step. The Normals of each individual surface are used as the rotation axes.
     </p>
   </div>
 
