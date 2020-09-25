@@ -9,7 +9,10 @@ title: Power Extruder
     PowerExtruder is a field-based polygon extruder with the variety of the tune and animation settings.
   </p>
   <div class="media-wrapper theatre">
-    <iframe src="https://player.vimeo.com/video/457926835?muted=1&autoplay=1&loop=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    <iframe src="https://player.vimeo.com/video/457926835?loop=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+  <div class="media-wrapper theatre">
+    <iframe src="https://player.vimeo.com/video/460488050?loop=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
   </div>
 </article>
 
@@ -51,6 +54,10 @@ title: Power Extruder
 <article>
   <h1>Installation</h1>
   <p>
+    I would appreciate if you'll grab your copy of the plugin from my <a class="external" href="https://gumroad.com/products" target="_blank">Gumroad page</a><br/>
+    Last update: version 0.5.2 from 26-09-2020
+  </p>
+  <p>
     Extract plugin into application plugins folder or into the user's plugin folder (see below)
   </p>
   <div class="media-wrapper liquid">
@@ -69,7 +76,7 @@ title: Power Extruder
   <a id="object" name="object"></a>
   <h1>Object properties</h1>
   <div class="media-wrapper liquid">
-    <div><img src="images/010__tab_object.png" /></div>
+    <div><img src="images/001_tab_object.png" /></div>
   </div>
 
   <h2>
@@ -79,7 +86,7 @@ title: Power Extruder
   <div class="property-desc">
     <p>Amount of extrusion levels (extrude iterations)</p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/010_levels_0000.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/010_levels_0000.jpg" /></div></li>
     </ul>
   </div>
 
@@ -100,6 +107,36 @@ title: Power Extruder
   </div>
 
   <h2>
+    <span class="property-name">Extrusion Mode</span>
+  </h2>
+  <div class="property-desc">
+    <p>You can select from the following three modes (each corresponds to built-in Cinema4D methods):</p>
+    <h3>Extrude</h3>
+    <p>
+      The extrusion takes place along the Normals of the selected surfaces; the average value is evaluated from all the Normals to be extruded.<br/>
+      In this mode "Extrude Inner: With Extrude" mode is not working.
+    </p>
+    <ul class="image-list image-list-details cols-2">
+      <li><div class="media-wrapper"><img src="images/030_extrude_mode_0000.jpg" /></div></li>
+    </ul>
+    <h3>Bevel</h3>
+    <p>
+      The Polygons will be taken from its initial position, its size will be modified and moved in the direction of its normals (or in the opposite direction, if desired).
+    </p>
+    <ul class="image-list image-list-details cols-2">
+      <li><div class="media-wrapper"><img src="images/030_extrude_mode_0001.jpg" /></div></li>
+    </ul>
+    <h3>Smooth Shift</h3>
+    <p>
+      Smooth Shift is very similar to the Extrude tool. Selected surfaces will be moved in the direction of their Normals. However, the defined Maximum Angle value will be used to determine if a new connecting surface should be created between polygons (for those of constant size) or if the surface will simply be extruded (whereby the polygon’s sizes will change).
+      In this mode "Extrude Inner: With Extrude" mode is not working.
+    </p>
+    <ul class="image-list image-list-details cols-2">
+      <li><div class="media-wrapper"><img src="images/030_extrude_mode_0002.jpg" /></div></li>
+    </ul>
+  </div>
+
+  <h2>
     <span class="property-name">Extrusion</span>
     <span class="property-unit">-&infin;..+&infin; m</span>
   </h2>
@@ -113,15 +150,15 @@ title: Power Extruder
   <div class="property-desc">
     <p>Extrusion profile from base to last level</p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/040_ext_profile_0000.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/040_ext_profile_0000.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/040_tab_object__ext_profile_1.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/040_ext_profile_0001.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/040_ext_profile_0001.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/040_tab_object__ext_profile_2.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/040_ext_profile_0002.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/040_ext_profile_0002.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/040_tab_object__ext_profile_3.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/040_ext_profile_0003.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/040_ext_profile_0003.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/040_tab_object__ext_profile_4.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/040_ext_profile_0004.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/040_ext_profile_0004.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/040_tab_object__ext_profile_5.png" /></div></li>
     </ul>
   </div>
@@ -135,11 +172,11 @@ title: Power Extruder
       If Preserve Groups (see below) is enabled, polygons that do not lie at an angle to each other in excess of this value will be held together. If the angle exceeds this value they will be torn apart during beveling.
     </p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/050_max_angle_0000.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/050_max_angle_0000.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/050_tab_object__max_angle_5.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/050_max_angle_0001.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/050_max_angle_0001.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/050_tab_object__max_angle_20.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/050_max_angle_0002.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/050_max_angle_0002.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/050_tab_object__max_angle_89.png" /></div></li>
     </ul>
   </div>
@@ -150,7 +187,7 @@ title: Power Extruder
       If enabled, connected surfaces will not be torn apart during beveling if the angle in which they lie does not exceed the Max Angle value.
     </p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/060_preserve_groups_0000.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/060_preserve_groups_0000.jpg" /></div></li>
     </ul>
   </div>
 </article>
@@ -158,6 +195,9 @@ title: Power Extruder
 <article data-short-name="Extrude Inner">
   <a id="extrude-inner" name="extrude-inner"></a>
   <h1>Extrude Inner</h1>
+  <div class="media-wrapper liquid">
+    <div><img src="images/002_tab_extrude_inner.png" /></div>
+  </div>
 
   <h2><span class="property-name">Execution</span></h2>
   <div class="property-desc">
@@ -165,14 +205,14 @@ title: Power Extruder
     <h3>Before Extrude</h3>
     <p>Firstly extrude inner is executed, and then normal extrusion</p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/070_ext_inner_execution_0000.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/070_ext_inner_execution_0000.jpg" /></div></li>
     </ul>
     <h3>With Extrude</h3>
     <p>
       Extrude inner and normal extrusion executes together (some sort of bevel operation)
     </p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/070_ext_inner_execution_0001.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/070_ext_inner_execution_0001.jpg" /></div></li>
     </ul>
   </div>
 
@@ -184,14 +224,14 @@ title: Power Extruder
       Polygons will be scaled during extrusion. The scaling is defined by Offset, whose effect is absolute when set to Fixed Distance.
     </p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/080_ext_inner_offset_mode_0000.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/080_ext_inner_offset_mode_0000.jpg" /></div></li>
     </ul>
     <h3>Proportional</h3>
     <p>
       Polygons will be scaled during extrusion. The scaling is defined by Offset, whose effect will be in relation to the original scale when set to Proportional. If surfaces of differing sizes are beveled, a value of 100% will result in all surfaces simultaneously reaching the null point (when 2 opposing edges approach each other, they will collide).
     </p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/080_ext_inner_offset_mode_0001.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/080_ext_inner_offset_mode_0001.jpg" /></div></li>
     </ul>
   </div>
 
@@ -204,9 +244,9 @@ title: Power Extruder
       This is the general unit of measure for the extrude inner width, i.e., the smaller the Offset value, the smaller the polygon or corner resolution. The Offset value can be limited in size by enabling the Limit option. As soon as points/edges are congruent they will be merged.
     </p>
     <ul class="image-list image-list-details cols-3">
-      <li><div class="media-wrapper"><img src="images/090_ext_inner_offset_0000.png" /></div><div class="media-description">Offset: -35m</div></li>
-      <li><div class="media-wrapper"><img src="images/090_ext_inner_offset_0001.png" /></div><div class="media-description">Offset: 0m</div></li>
-      <li><div class="media-wrapper"><img src="images/090_ext_inner_offset_0002.png" /></div><div class="media-description">Offset: 35m</div></li>
+      <li><div class="media-wrapper"><img src="images/090_ext_inner_offset_0000.jpg" /></div><div class="media-description">Offset: -35m</div></li>
+      <li><div class="media-wrapper"><img src="images/090_ext_inner_offset_0001.jpg" /></div><div class="media-description">Offset: 0m</div></li>
+      <li><div class="media-wrapper"><img src="images/090_ext_inner_offset_0002.jpg" /></div><div class="media-description">Offset: 35m</div></li>
     </ul>
   </div>
 
@@ -216,8 +256,8 @@ title: Power Extruder
       If newly created points or edges meet when the Offset value is increased, this option defines whether or not they should merge or move beyond this limit. In most cases this option should be enabled. Otherwise a lot of overlapping polygons can be created.
     </p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/100_ext_inner_limit_0000.png" /></div><div class="media-description">Limit is on</div></li>
-      <li><div class="media-wrapper"><img src="images/100_ext_inner_limit_0001.png" /></div><div class="media-description">Limit is off</div></li>
+      <li><div class="media-wrapper"><img src="images/100_ext_inner_limit_0000.jpg" /></div><div class="media-description">Limit is on</div></li>
+      <li><div class="media-wrapper"><img src="images/100_ext_inner_limit_0001.jpg" /></div><div class="media-description">Limit is off</div></li>
     </ul>
   </div>
 
@@ -230,11 +270,11 @@ title: Power Extruder
   <div class="property-desc">
     <p>Inner Extrusion profile from base to last level</p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/110_ext_inner_profile_0000.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/110_ext_inner_profile_0000.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/110_tab_extinner__profile_1.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/110_ext_inner_profile_0001.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/110_ext_inner_profile_0001.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/110_tab_extinner__profile_2.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/110_ext_inner_profile_0002.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/110_ext_inner_profile_0002.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/110_tab_extinner__profile_3.png" /></div></li>
     </ul>
   </div>
@@ -243,6 +283,9 @@ title: Power Extruder
 <article data-short-name="Level Fields">
   <a id="level-fields" name="level-fields"></a>
   <h1>Level Fields</h1>
+  <div class="media-wrapper liquid">
+    <div><img src="images/003_tab_level_fields.png" /></div>
+  </div>
 
   <h2><span class="property-name">Field</span></h2>
   <div class="property-desc">
@@ -256,13 +299,13 @@ title: Power Extruder
       If we represent brightness as field strength as follows:
     </p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/120_lvl_fields_0000.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/120_lvl_fields_0000.jpg" /></div></li>
     </ul>
     <p>
       ...then the more brighten is polygon the more extrude levels it would have:
     </p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/120_lvl_fields_0001.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/120_lvl_fields_0001.jpg" /></div></li>
     </ul>
   </div>
 </article>
@@ -270,6 +313,9 @@ title: Power Extruder
 <article data-short-name="Advanced">
   <a id="advanced" name="advanced"></a>
   <h1>Advanced</h1>
+  <div class="media-wrapper liquid">
+    <div><img src="images/004_tab_advanced.png" /></div>
+  </div>
 
   <h2><span class="property-name">Restrict to Selection</span></h2>
   <div class="property-desc">
@@ -280,7 +326,7 @@ title: Power Extruder
       If selection name is provided but doesn't exist in children hierarchy - no result would be generated.
     </p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/130_adv_resrtict_0000.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/130_adv_resrtict_0000.jpg" /></div></li>
     </ul>
   </div>
 
@@ -289,9 +335,17 @@ title: Power Extruder
     <p>Disconnect polygon selection before plugin execution</p>
   </div>
 
-  <h2><span class="property-name">Continue Level Numbering</span></h2>
+  <h2><span class="property-name">Use Custom Base Level number</span></h2>
   <div class="property-desc">
-    <p>If Restrict Selection is provided and it's a specific level cap (name is 'CX', where X is a number) then new level starts from this number (by default level numbering starts from the 0)</p>
+    <p>By default level numbering starts from the 0. Enable this option to enter custom base level number.</p>
+  </div>
+
+  <h2>
+    <span class="property-name">Base Level Number</span>
+    <span class="property-unit">0..+&infin;</span>
+  </h2>
+  <div class="property-desc">
+    <p>Base level would start from this number, so in selections instead of C0, C1, ... you would get C{X}, C{X+1}, ...</p>
   </div>
 
   <h2>
@@ -309,21 +363,21 @@ title: Power Extruder
       For n-gons, a point is created in the center of the n-gon; edges are then created that run from the center point to the n-gon’s original corner points. The new polygons are made up of triangles and quadrangles.
     </p>
     <ul class="image-list image-list-details cols-3">
-      <li><div class="media-wrapper"><img src="images/140_adv_subdiv_0000.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/140_adv_subdiv_0001.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/140_adv_subdiv_0002.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/140_adv_subdiv_0000.jpg" /></div></li>
+      <li><div class="media-wrapper"><img src="images/140_adv_subdiv_0001.jpg" /></div></li>
+      <li><div class="media-wrapper"><img src="images/140_adv_subdiv_0002.jpg" /></div></li>
     </ul>
   </div>
 
   <h2><span class="property-name">Smooth Subdivision</span></h2>
   <div class="property-desc">
     <p>
-      With this option enabled the object is subdivided using the Subdivision Surface formula. Point positions that already exist are modified to round the structure of the surface. If this option is disabled, existing point positions are maintained and the surface is not smoothed when subdividing.
+      If this option is enabled the object is subdivided using the Subdivision Surface formula. Point positions that already exist are modified to round the structure of the surface. If this option is disabled, existing point positions are maintained and the surface is not smoothed when subdividing.
     </p>
     <ul class="image-list image-list-details cols-3">
-      <li><div class="media-wrapper"><img src="images/150_adv_subdiv_smooth_0000.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/150_adv_subdiv_smooth_0001.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/150_adv_subdiv_smooth_0002.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/150_adv_subdiv_smooth_0000.jpg" /></div></li>
+      <li><div class="media-wrapper"><img src="images/150_adv_subdiv_smooth_0001.jpg" /></div></li>
+      <li><div class="media-wrapper"><img src="images/150_adv_subdiv_smooth_0002.jpg" /></div></li>
     </ul>
   </div>
 
@@ -332,6 +386,23 @@ title: Power Extruder
     <p>
       If this option is enabled subdivision would be limited to the provided <b>Restrict Selection</b>.
     </p>
+  </div>
+
+  <h2><span class="property-name">Generate N-gons *</span></h2>
+  <div class="property-desc">
+    <p>
+      This is a headache. You might get unpredictable bad mesh, so you're warned.<br/>
+      If your Power Extrude is restricted to a selection, "Disconnect Selection" option is disabled and you have subdivide value other than zero, you'll get triangles around the subdivision.<br/>
+      If this option is enabled plugin would try to remove unwanted triangles for you.
+    </p>
+    <ul class="image-list image-list-details cols-2">
+      <li><div class="media-wrapper"><img src="images/155_adv_subdiv_ngons_0000.jpg" /></div></li>
+      <li><div class="media-wrapper"><img src="images/155_tab_adv__ngon_1.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/155_adv_subdiv_ngons_0001.jpg" /></div></li>
+      <li><div class="media-wrapper"><img src="images/155_tab_adv__ngon_2.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/155_adv_subdiv_ngons_0002.jpg" /></div></li>
+      <li><div class="media-wrapper"><img src="images/155_tab_adv__ngon_3.png" /></div></li>
+    </ul>
   </div>
 
   <h2>
@@ -348,11 +419,11 @@ title: Power Extruder
   <div class="property-desc">
     <p>Use this graph to move polygons along its extrusion.</p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/160_adv_normal_move_0000.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/160_adv_normal_move_0000.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/160_tab_adv__move_1.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/160_adv_normal_move_0001.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/160_adv_normal_move_0001.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/160_tab_adv__move_2.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/160_adv_normal_move_0002.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/160_adv_normal_move_0002.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/160_tab_adv__move_3.png" /></div></li>
     </ul>
   </div>
@@ -371,11 +442,11 @@ title: Power Extruder
   <div class="property-desc">
     <p>Use this graph to scale polygons along its extrusion.</p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/170_adv_normal_scale_0000.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/170_adv_normal_scale_0000.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/170_tab_adv__scale_1.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/170_adv_normal_scale_0001.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/170_adv_normal_scale_0001.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/170_tab_adv__scale_2.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/170_adv_normal_scale_0002.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/170_adv_normal_scale_0002.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/170_tab_adv__scale_3.png" /></div></li>
     </ul>
   </div>
@@ -394,11 +465,11 @@ title: Power Extruder
   <div class="property-desc">
     <p>Use this graph to twist polygons along its extrusion.</p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/180_adv_normal_rotate_0000.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/180_adv_normal_rotate_0000.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/180_tab_adv__rotate_1.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/180_adv_normal_rotate_0001.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/180_adv_normal_rotate_0001.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/180_tab_adv__rotate_2.png" /></div></li>
-      <li><div class="media-wrapper"><img src="images/180_adv_normal_rotate_0002.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/180_adv_normal_rotate_0002.jpg" /></div></li>
       <li><div class="media-wrapper"><img src="images/180_tab_adv__rotate_3.png" /></div></li>
     </ul>
   </div>
@@ -408,12 +479,15 @@ title: Power Extruder
   <a id="selection" name="selection"></a>
   <h1>Selections</h1>
   <p>If you want to assign different materials to the level tops and sides, use these tags to restrict the materials accordingly (this also works without previously making the PowerExtruder object editable).</p>
+  <div class="media-wrapper liquid">
+    <div><img src="images/005_tab_selections.png" /></div>
+  </div>
 
   <h2><span class="property-name">All Caps</span></h2>
   <div class="property-desc">
     <p>All caps as the single selection from level 1 to the end</p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/190_selections_0000.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/190_selections_0000.jpg" /></div></li>
     </ul>
   </div>
 
@@ -421,7 +495,7 @@ title: Power Extruder
   <div class="property-desc">
     <p>Only caps as the single selection where extrusion ends</p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/190_selections_0001.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/190_selections_0001.jpg" /></div></li>
     </ul>
   </div>
 
@@ -429,7 +503,7 @@ title: Power Extruder
   <div class="property-desc">
     <p>All caps as separate selection tag from level 0 to the end</p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/190_selections_0002.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/190_selections_0002.jpg" /></div></li>
     </ul>
   </div>
 
@@ -437,7 +511,36 @@ title: Power Extruder
   <div class="property-desc">
     <p>Side polygons as the single selection</p>
     <ul class="image-list image-list-details cols-2">
-      <li><div class="media-wrapper"><img src="images/190_selections_0003.png" /></div></li>
+      <li><div class="media-wrapper"><img src="images/190_selections_0003.jpg" /></div></li>
     </ul>
+  </div>
+
+  <h1>Internal Selections</h1>
+  <p>These are hidden selections, you'll see them only if you make 'Current State to Object' on your plugin. But originally it exists, you can use selection names in materials or other places where you need to provide selection names instead of selection tags.<br/>
+  Available selections: 'S', 'CA', 'CE', 'C0', 'C1', ... 'C{level count}'</p>
+
+  <h2><span class="property-name">Internal All Caps</span></h2>
+  <div class="property-desc">
+    <p>All caps as the single selection from level 1 to the end</p>
+  </div>
+
+  <h2><span class="property-name">Internal End Caps</span></h2>
+  <div class="property-desc">
+    <p>Only caps as the single selection where extrusion ends</p>
+  </div>
+
+  <h2><span class="property-name">Internal Base Level Cap</span></h2>
+  <div class="property-desc">
+    <p>Level 0 cap as selection tag</p>
+  </div>
+
+  <h2><span class="property-name">Internal New Levels Caps</span></h2>
+  <div class="property-desc">
+    <p>All other level caps as separate selection tag from level 1 to the end</p>
+  </div>
+
+  <h2><span class="property-name">Internal Sides</span></h2>
+  <div class="property-desc">
+    <p>Side polygons as the single selection</p>
   </div>
 </article>

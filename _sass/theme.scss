@@ -259,6 +259,13 @@ li.main-nav-item a:visited {
   margin: 1rem 0 1rem
 }
 
+.main-content a {
+  font-weight: bold;
+}
+.main-content a.external::after {
+  content: "\00a0\2BAD";
+}
+
 .flex {
   display: flex;
 }
